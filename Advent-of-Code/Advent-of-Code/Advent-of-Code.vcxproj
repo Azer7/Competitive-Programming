@@ -155,7 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test.cpp" />
-    <ClCompile Include="day13.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
