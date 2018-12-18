@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\day17.cpp">
+    <ClCompile Include="..\day17a.cpp">
       <SubType>
       </SubType>
     </ClCompile>
