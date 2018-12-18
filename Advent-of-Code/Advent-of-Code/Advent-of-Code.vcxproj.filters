@@ -13,10 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Input Files">
+      <UniqueIdentifier>{0159a91d-78aa-4d1b-9679-22df2ce4322d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\day17a.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\input\day13.txt">
+      <Filter>Input Files</Filter>
+    </Text>
+    <Text Include="..\input\day17.txt">
+      <Filter>Input Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

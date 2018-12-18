@@ -24,6 +24,10 @@
       </SubType>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\input\day13.txt" />
+    <Text Include="..\input\day17.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{FBD0C6E3-DD9D-4FBD-B3D1-3E166037D967}</ProjectGuid>
