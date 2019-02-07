@@ -1,0 +1,13 @@
+Kattis:
+countingtriangles
+narrowartgallery
+segmentintersection
+studying
+endoftheworld
+"robot in a maze"
+assigning workspaces
+
+
+
+Important Algorithms:
+discuss.codechef.com/questions/18752

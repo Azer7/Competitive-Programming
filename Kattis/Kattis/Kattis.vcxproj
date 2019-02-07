@@ -154,13 +154,13 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test1.cpp">
+    <Text Include="..\Input\input.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Unsolved\flowshop.cpp">
       <SubType>
       </SubType>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\Input\input.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

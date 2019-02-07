@@ -23,13 +23,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="..\Input\input.txt">
       <Filter>Input</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Unsolved\flowshop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
