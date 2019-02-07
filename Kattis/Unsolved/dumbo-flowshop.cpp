@@ -8,8 +8,11 @@
 #include <map>
 #include <set>
 #include <math.h>
+#include <limits>
 
 #define PI 3.1415926535897932
+#define INT_MAX 2147483647
+#define LONGLONG_MAX 9223372036854775807
 
 using namespace std;
 
@@ -33,6 +36,8 @@ void consoleVector(vector<vector<int>> vec) {
 	}
 }
 
+int debug = 0;
+//yayeet
 void propagate(int timeToUse, vector<vector<int>> &rows, int rowIndex, int colIndex, vector<int>& rowTime) {
 	for (; colIndex < rows[0].size() && rows[rowIndex][colIndex] == 0; ++colIndex);
 	//this should never land on 0 because outputCount should not let it however it could
@@ -40,33 +45,55 @@ void propagate(int timeToUse, vector<vector<int>> &rows, int rowIndex, int colIn
 	while (timeToUse > 0) { //on row rowIndex propagate rightwards --> 
 		//if can use up time then go for it otherwise need to wait and process down
 		if (rows[rowIndex - 1][colIndex] == 0) { //doesn't have to wait for things to complete
-			if (rowIndex - 1 >= outputCount) {
-				//get rid of a number
-				int time = rows[rowIndex][colIndex];
-				rowTime[rowIndex] += time;
+			//get rid of a number
+			int time;
+			if (timeToUse < rows[rowIndex][colIndex])
+				time = timeToUse;
+			else
+				time = rows[rowIndex][colIndex];
+			rowTime[rowIndex] += time;
 
-				rows[rowIndex][colIndex] = 0; //set distance left to 0 after adding it to the time total;
+			rows[rowIndex][colIndex] -= time; //set distance left to 0 after adding it to the time total;
 
-				timeToUse -= time;
-				//pass the time upwards
+			timeToUse -= time;
+			//pass the time upwards
+
+			if (rowIndex - 1 >= outputCount) { //if on top rows don't propagate
 				propagate(time, rows, rowIndex - 1, colIndex + 1, rowTime);
 			}
+
+			if (rows[rowIndex][colIndex] == 0)
+				colIndex++;
 		}
 		else
 		{
 			//clear up top by scanning up and doing minimum and substracting by time taken (use up a tad of the time)
-			int i = rowIndex;
-			for (; rows[i-1][colIndex] != 0; i--);
+			while (rows[rowIndex - 1][colIndex] != 0) { //clears all upwards
+				int i = rowIndex;
+				for (; rows[i - 1][colIndex] != 0; i--);
 
-			//subtract that row time
-			timeToUse -= rows[i][colIndex];
-			rowTime[rowIndex] += rows[i][colIndex];
+				int waitTime = rows[i][colIndex];
+
+				//subtract that row time
+				timeToUse -= waitTime;
+
+				//add wait time too all waiting rows vvv				
+				for (int j = rowIndex; j > i; j--) {
+					rowTime[j] += waitTime;
+				}
+
+				propagate(waitTime, rows, i, colIndex, rowTime); //This should be able to remove any blocks
+				debug++;
+			}
 		}
-		
-		consoleVector(rows);
 
-		colIndex++;
+		//consoleVector(rows);
+
+
 		if (colIndex > rows[0].size() - 1) {
+			if (outputCount != 1) {
+				cout << " ";
+			}
 			cout << rowTime[rowIndex];
 			outputCount++;
 			timeToUse = 0; //exit as done
@@ -104,9 +131,7 @@ int main() {
 	////currently index where worker is at
 	//
 	propagate(INT_MAX, rows, rows.size() - 1, 0, rowTime);
-
-
-
+	
 
 
 	return 0;

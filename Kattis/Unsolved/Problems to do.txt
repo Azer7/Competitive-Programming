@@ -6,6 +6,8 @@ studying
 endoftheworld
 "robot in a maze"
 assigning workspaces
+*a1paper
+*arranginghat
 
 
 

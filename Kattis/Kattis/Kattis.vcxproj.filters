@@ -27,9 +27,4 @@
       <Filter>Input</Filter>
     </Text>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\Unsolved\flowshop.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
