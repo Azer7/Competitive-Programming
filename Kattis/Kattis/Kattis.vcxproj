@@ -156,6 +156,12 @@
   <ItemGroup>
     <Text Include="..\Input\input.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="a1paper.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

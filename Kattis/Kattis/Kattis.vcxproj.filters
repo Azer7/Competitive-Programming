@@ -27,4 +27,9 @@
       <Filter>Input</Filter>
     </Text>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="a1paper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
