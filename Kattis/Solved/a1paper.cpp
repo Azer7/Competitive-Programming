@@ -24,8 +24,17 @@ void inputFile() {
 #endif
 }
 
-float getLength(int paperNumber) {	
-	double sideLength = powl(2, (1.0 - 2*paperNumber) / 4.0); //sideLength of A2
+double getLength(int paperNumber) {
+	double A2Length = powl(2, -0.75); //sideLength of A2
+	double A2Width = powl(2, -1.25);
+	double sideLength = 0;
+	if (paperNumber % 2 == 0) { //if even it's just half
+		sideLength = A2Length / pow(2, (paperNumber / 2) - 1); // half fraction
+	}
+	else { //odd
+		sideLength = A2Width / pow(2, ((paperNumber - 1) / 2) - 1);
+	}
+
 
 	return sideLength;
 }
@@ -51,7 +60,7 @@ int main() {
 		//check if already have enough paper
 
 		if (needPaper[i] <= 0) {
-			needPaper[i] = 0;
+			hasPaper[i] += needPaper[i];//don't go overboard
 			possible = true;
 			break; //can calculate float
 		}
@@ -64,8 +73,10 @@ int main() {
 
 	//possible, calculate float
 	double tape = 0;
-	for (int b = i; b >= 0; b--) {  //loop back and add the totals
-		tape += needPaper[b] * getLength(b + 2);
+	for (int b = i; b >= 1; b--) {  //loop back and add the totals
+		int toTape = hasPaper[b] / 2; //number of pages to tape
+		tape += toTape * getLength(b + 1);
+		hasPaper[b - 1] += toTape;
 	}
 
 	cout << fixed << setprecision(15);
