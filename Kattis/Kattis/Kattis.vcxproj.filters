@@ -28,7 +28,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="a1paper.cpp">
+    <ClCompile Include="Contest Template.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
