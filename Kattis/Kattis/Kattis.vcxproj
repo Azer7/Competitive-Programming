@@ -157,7 +157,7 @@
     <Text Include="..\Input\input.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="..\Unsolved\torn2pieces.cpp">
       <SubType>
       </SubType>
     </ClCompile>

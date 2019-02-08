@@ -28,7 +28,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="..\Unsolved\torn2pieces.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
