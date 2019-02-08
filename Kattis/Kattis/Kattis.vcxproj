@@ -157,7 +157,7 @@
     <Text Include="..\Input\input.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Contest Template.cpp">
+    <ClCompile Include="test.cpp">
       <SubType>
       </SubType>
     </ClCompile>

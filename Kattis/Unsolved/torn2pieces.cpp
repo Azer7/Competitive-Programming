@@ -1,3 +1,5 @@
+#pragma region SetupFiles
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -24,6 +26,8 @@ void inputFile() {
 #pragma warning(pop)
 #endif
 }
+
+#pragma endregion
 
 int main() {
 	inputFile();

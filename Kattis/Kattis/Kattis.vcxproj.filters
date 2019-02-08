@@ -28,7 +28,7 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Contest Template.cpp">
+    <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
