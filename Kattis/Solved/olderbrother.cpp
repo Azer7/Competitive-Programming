@@ -29,10 +29,40 @@ void inputFile() {
 
 #pragma endregion
 
+int getFactor (int n) {
+	bool isPrime = true;
+	for (int i = 2; i*i <= n; ++i)
+	{
+		if (n % i == 0)
+		{
+			return i; 
+		}
+	}
+	return n;
+}
+
 int main() {
-	inputFile();
+	//inputFile();
 	//inputs file
+	
+	int q;
+	cin >> q;
+	if (q == 1) {
+		cout << "no" << endl;
+		return 0;
+	}
+	int factor = getFactor(q);
+	while (q % factor == 0) {
+		q /= factor;
+	}
+	 
+	if (q == 1) {
+		cout << "yes";
+	}
+	else {
+		cout << "no";
+	}
 
-
+	cout << endl;
 	return 0;
 }

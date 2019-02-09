@@ -35,7 +35,6 @@ double getLength(int paperNumber) {
 		sideLength = A2Width / pow(2, ((paperNumber - 1) / 2) - 1);
 	}
 
-
 	return sideLength;
 }
 
