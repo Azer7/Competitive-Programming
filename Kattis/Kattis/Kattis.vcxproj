@@ -157,7 +157,7 @@
     <Text Include="..\Input\input.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Problems\-arbitrage.cpp" />
+    <ClCompile Include="..\Solved\-RoboThieves.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
