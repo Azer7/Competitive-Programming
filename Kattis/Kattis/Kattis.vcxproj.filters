@@ -27,9 +27,4 @@
       <Filter>Input</Filter>
     </Text>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="arbitrage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>

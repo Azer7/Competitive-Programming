@@ -92,22 +92,22 @@ int main() {
 			if (mapVec[i][j] == 'C') {
 				//up
 				for (int ofs = 0; mapVec[i - ofs][j] != 'W'; ofs++) {
-					if (mapVec[i - ofs][j] == '.')
+					if (mapVec[i - ofs][j] == '.' || mapVec[i - ofs][j] == 'S')
 						mapVec[i - ofs][j] = 'N';
 				}
 				//right
 				for (int ofs = 0; mapVec[i][j + ofs] != 'W'; ofs++) {
-					if (mapVec[i][j + ofs] == '.')
+					if (mapVec[i][j + ofs] == '.' || mapVec[i][j + ofs] == 'S')
 						mapVec[i][j + ofs] = 'N';
 				}
 				//down
 				for (int ofs = 0; mapVec[i + ofs][j] != 'W'; ofs++) {
-					if (mapVec[i + ofs][j] == '.')
+					if (mapVec[i + ofs][j] == '.' || mapVec[i+ofs][j] == 'S')
 						mapVec[i + ofs][j] = 'N';
 				}
 				//left
 				for (int ofs = 0; mapVec[i][j - ofs] != 'W'; ofs++) {
-					if (mapVec[i][j - ofs] == '.')
+					if (mapVec[i][j - ofs] == '.' || mapVec[i][j - ofs] == 'S')
 						mapVec[i][j - ofs] = 'N';
 				}
 			}
@@ -119,7 +119,6 @@ int main() {
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
 			if (originalMapVec[i][j] == '.') {
-				if(movesTakenVec[i][j] > 10000000)
 					cout << movesTakenVec[i][j] << endl;
 			}
 		}
