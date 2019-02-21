@@ -19,10 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NailedIt.cpp">
+    <ClCompile Include="..\Problems\NailedIt.cpp">
       <SubType>
       </SubType>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Input\input.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -18,8 +18,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NailedIt.cpp">
+    <ClCompile Include="..\Problems\NailedIt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Input\input.txt">
+      <Filter>Input</Filter>
+    </Text>
   </ItemGroup>
 </Project>
